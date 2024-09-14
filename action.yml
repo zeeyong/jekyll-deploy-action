@@ -7,7 +7,7 @@ branding:
 categories: 
       - jekyll 
       - github
-author: 'Sujay Kundu'
+author: 'zeeyong'
 runs:
   using: 'docker'
   image: 'Dockerfile'
