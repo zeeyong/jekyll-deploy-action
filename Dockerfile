@@ -1,22 +1,22 @@
 # Our Docker image will be based on ruby:2-slim
 # it is a very light docker image.
-FROM ruby:3.3.4-slim
+FROM ruby:3.3.5-slim
 LABEL author="Sujay Kundu"
 LABEL version="1.0.5"
 
 # Lets install all dependencies
 # including git and Bundler 2.5.14
-ENV BUNDLER_VERSION 2.5.14
+ENV BUNDLER_VERSION 2.5.18
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
     bats \
     build-essential \
     ca-certificates \
     curl \
-    libffi7 \
+    libffi-dev \
     make \
     shellcheck \
-    libffi7 \
+    libffi-dev \
     git-all \
     && gem install bundler:2.5.14 \
     && bundle config --global silence_root_warning 1 \
